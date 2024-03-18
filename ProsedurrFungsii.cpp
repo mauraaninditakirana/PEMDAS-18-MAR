@@ -3,42 +3,39 @@ using namespace std;
 
 string nama;
 int nXpander, nPorsche, nAvanza, nBrio, nLamborghini;
-int hXpander = 300, hporsche = 8000, hAvanza = 250, hBrio = 200, hLamborghini = 6000;
+int hXpander = 300, hPorsche = 8000, hAvanza = 260, hBrio = 200, hLamborghini = 6000;
 
 void input(){
-    cout << "Nama Pembeli : ";
+    cout << "nama pembeli : ";
     cin >> nama;
-    cout << "Jumlah Xpander :";
+    cout << "jumlah Xpander : ";
     cin >> nXpander;
-
-    cout << "Jumlah Porsche :";
+    cout << "jumlah Porsche : ";
     cin >> nPorsche;
-
-    cout << "Jumlah Avanza :";
+    cout << "jumlah Avanza : ";
     cin >> nAvanza;
-
-    cout << "Jumlah Brio :";
+    cout << "jumlah Brio : ";
     cin >> nBrio;
-
-    cout << "Jumlah Lamborghini :";
+    cout << "jumlah Lamborghini : ";
     cin >> nLamborghini;
 
 }
+
 int TotalHarga(){
-    return (nXpander * hXpander) + (nPorsche * hporsche) + (nAvanza * hAvanza ) + (nBrio * hBrio) + (nLamborghini * hLamborghini);
+    return (nXpander * hXpander) + (nPorsche * hPorsche) + (nAvanza * hAvanza) + (nBrio * hBrio) + (nLamborghini * hLamborghini);
 }
 
 void display(){
-    cout << "Total harganya :" << TotalHarga() << endl;
-
+    cout << "total harga : " << TotalHarga() << endl;
 }
+
 int main(){
     char pilihan;
     do{
     input();
-    display();
-    cout << "Apakah ingin membeli kembali ?";
-    cin >> pilihan;
+    display(); 
+    cout << "apakah ingin membeli kembali? ";
+    cin >> pilihan; 
     }while(pilihan == 'y' || pilihan == 'Y');
-
+    
 }
